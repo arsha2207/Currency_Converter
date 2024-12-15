@@ -17,7 +17,11 @@ public class CurrencyConverter {
         currencyCodes.put(3,"EUR");
         currencyCodes.put(4,"HKD");
         currencyCodes.put(5,"INR");
-
+        currencyCodes.put(6,"JPY");
+        currencyCodes.put(7,"GBP");
+        currencyCodes.put(8,"AUD");
+        currencyCodes.put(9,"CHF");
+        currencyCodes.put(10,"NZD");
         int from,to;
         String fromCode, toCode;
         double amount;
@@ -26,21 +30,21 @@ public class CurrencyConverter {
         boolean running = true;
         do{
             System.out.println("Please enter the currency code you would like to convert from");
-            System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)");
+            System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)\n6.JPY(Japanese yen)\t7.GBP(Pound sterling)\t8.AUD(Australian dollar)\t9.CHF(Swiss franc)\t10.NZD(New Zealand dollar)");
             from=input.nextInt();
-            if(from<1||from>5){
+            if(from<1||from>10){
                 System.out.println("Please enter a valid currency code");
-                System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)");
+                System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)\n6.JPY(Japanese yen)\t7.GBP(Pound sterling)\t8.AUD(Australian dollar)\t9.CHF(Swiss franc)\t10.NZD(New Zealand dollar");
                 from=input.nextInt();
             }
             fromCode = currencyCodes.get(from);
 
             System.out.println("Please enter the currency code you would like to convert to");
-            System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)");
+            System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)\n6.JPY(Japanese yen)\t7.GBP(Pound sterling)\t8.AUD(Australian dollar)\t9.CHF(Swiss franc)\t10.NZD(New Zealand dollar");
             to=input.nextInt();
-            if(to<1||to>5){
+            if(to<1||to>10){
                 System.out.println("Please enter a valid currency code");
-                System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)");
+                System.out.println("1. USD(US Dollar)\t 2.CAD(Canadian Dollar)\t 3.EUR(Euro)\t 4.HKD(Hong Kong Dollar)\t 5.INR(Indian Rupee)\n6.JPY(Japanese yen)\t7.GBP(Pound sterling)\t8.AUD(Australian dollar)\t9.CHF(Swiss franc)\t10.NZD(New Zealand dollar");
                 to=input.nextInt();
             }
             toCode = currencyCodes.get(to);
